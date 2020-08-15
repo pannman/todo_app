@@ -60,6 +60,15 @@ p{
   margin:180px;
   text-align: center;
 }
+.shall{
+  font-size: 70px;
+  font-weight: bolder;
+}
+.every{
+  font-size: 20px;
+  margin: 40px 0px 60px;
+  font-family: serif;
+}
 .start-btn{
   border-radius: 50px;
   background-color: #68ECF2;
@@ -83,6 +92,9 @@ p{
   background-color: #FEFEFE;
   display: flex;
   justify-content:center;
+}
+.feature{
+  margin: 10px;
 }
 .feature-top{
   display: flex;
@@ -110,6 +122,16 @@ p{
   height: 300px;
   background-color: #D9FAFC;
 }
+.smooth{
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 30px;
+  font-family: serif;
+}
+.sentence{
+  font-size: 22px;
+  font-family: serif;
+}
 .main-lets{
   margin: auto;
   padding-top: 40px;
@@ -129,6 +151,11 @@ p{
   margin-left: 25%;
 
 }
+.lets-image >p{
+  margin: auto;
+  font-size: 30px;
+  font-family: serif;
+}
 .top-footer{
   width: 100%;
   height: 250px;
@@ -145,13 +172,124 @@ p{
   height: 60px;
 }
 
-
 /* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1050px) {
 
+  .main-feature{
+    height: 400px;
+  }
+  .feature{
+    margin: 10px;
+  }
+  .feature-top{
+    width:200px;
+    height:200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size:23px;
+  }
 }
 
 /* 480px以下に適用されるCSS（スマホ用） */
 @media screen and (max-width: 480px) {
+  .top-header{
+    height: 460px;
+    background-position: right 30% top 10%;
+  }
+  .header-top{
+    height : 75px;
+    background-color: rgba( 0, 0, 0, 0.15 );
+  }
+  .title-image >img{
+    width: 50px;
+    height: 50px;
+    margin:13px;
+  }
+  .login-btn{
+    display: none;
+  }
+
+  .signup-btn{
+    display: none;
+  }
+  .header-theme{
+    padding-top: 95px;
+    margin: auto;
+  }
+  .shall{
+    font-size: 30px;
+  }
+  .every{
+    font-size: 15px;
+    margin: 20px 0px 60px;
+  }
+  .start-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .main-feature{
+    height: 1100px;
+    display: block;
+  }
+  .feature{
+    margin: auto;
+    padding: 40px;
+  }
+  .feature-top{
+    width:190px;
+    height:190px;
+    margin: 0px 30px;
+    padding:10px;
+    border: solid 10px #68ECF2;
+    font-size:22px;
+  }
+  .feature-explain{
+    margin-top: 30px;
+    font-size:15px;
+  }
+  .main-imapct{
+    margin: auto;
+    padding-top: 50px;
+    text-align: left;
+    height: 200px;
+  }
+  .smooth{
+    font-size: 25px;
+    margin: 0px 30px;
+  }
+  .sentence{
+    font-size: 15px;
+    margin: 30px;
+  }
+  .main-lets{
+    padding-top: 30px;
+    height: 150px;
+  }
+  .lets-image{
+    display: block;
+    margin: 20px;
+    padding-right: 0%;
+  }
+  .lets-image >p{
+    font-size: 25px;
+  }
+  .lets-image >img{
+    display: none;
+
+  }
+  .top-footer{
+    height: 200px;
+  }
+  .icon{
+    width: 15%;
+    padding: 40px 40%;
+    text-align: center;
+
+  }
+  .icon > img{
+    width: 50px;
+    height: 50px;
+  }
 
 }
