@@ -55,6 +55,10 @@ p{
 .signup-btn:hover{
   border-color: red;
 }
+#humberger{
+  display: none;
+}
+
 
 .header-theme{
   margin:180px;
@@ -159,7 +163,7 @@ p{
 .top-footer{
   width: 100%;
   height: 250px;
-  background-color:#728D8D
+  background-color:#728D8D;
 }
 .icon{
   width: 15%;
@@ -198,6 +202,8 @@ p{
     background-position: right 30% top 10%;
   }
   .header-top{
+    position: fixed;
+    z-index:500;
     height : 75px;
     background-color: rgba( 0, 0, 0, 0.15 );
   }
@@ -206,6 +212,45 @@ p{
     height: 50px;
     margin:13px;
   }
+  #alltouch{
+    width: 100%;
+    height: 2000px;
+    background-color: rgba( black, 0.15 );
+  }
+
+  #sidebar{
+    width: 100%;
+    background-color: #FEFEFE;
+    height: 350px;
+    position: relative;
+    padding-top: 15px;
+  }
+
+  .login-responsive-btn{
+    margin-top: 25%;
+    margin-left: 30%;
+    text-align: center;
+    width: 40%;
+    border-radius: 50px;
+    padding:10px;
+    border: solid 1px #68ECF2;
+    color: #68ECF2;
+    background-color: white;
+    text-decoration: none;
+
+  }
+  .signup-responsive-btn{
+    margin-top: 55px;
+    margin-left: 30%;
+    text-align: center;
+    width: 40%;
+    border-radius: 50px;
+    padding:10px;
+    border: solid 1px #68ECF2;
+    background-color: white;
+    color: #68ECF2;
+    text-decoration: none;
+  }
   .login-btn{
     display: none;
   }
@@ -213,8 +258,59 @@ p{
   .signup-btn{
     display: none;
   }
+  #humberger {
+    float: right;
+    margin: 17px;
+    position: relative;
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #68ECF2;
+    border-radius: 50%;
+  }
+  #humberger div {
+    position: absolute;
+    left: 8px;
+    height: 2px;
+    width: 24px;
+    background-color: white;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  #humberger div:nth-of-type(1) {
+    top: 13px;
+  }
+  #humberger div:nth-of-type(2) {
+    top: 20px;
+  }
+  #humberger div:nth-of-type(3) {
+    bottom: 11px;
+  }
+  .batu {
+    float: right;
+    margin-right: 15px;
+    position: relative;
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #68ECF2;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .batu p{
+    color: #68ECF2;
+    font-size: 40px;
+    position: absolute;
+    left: 7px;
+    top: -12px;
+    border-radius: 2px;
+    display: inline-block;
+  }
   .header-theme{
-    padding-top: 95px;
+    padding-top:170px;
     margin: auto;
   }
   .shall{
@@ -283,7 +379,7 @@ p{
   }
   .icon{
     width: 15%;
-    padding: 40px 40%;
+    padding: 40px 43%;
     text-align: center;
 
   }
