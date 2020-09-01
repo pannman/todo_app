@@ -1,0 +1,7 @@
+<% if @user.errors.full_messages_for(:name).any? %>
+  <ul class = "error_message">
+  <% @user.errors.full_messages_for(:name).each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>

@@ -2,16 +2,16 @@
 <div class ="top-header">
   <div class = "background-opacity">
     <div class ="header-top">
-      <%= link_to image_tag("title.png"), "#",class: "title-image" %>
+      <%= link_to image_tag("title.png"), "/",class: "title-image" %>
       <%= link_to "ログイン","#",class: "btn login-btn" %>
-      <%= link_to "サインアップ","#",class: "btn signup-btn" %>
+      <%= link_to "サインアップ","/signup",class: "btn signup-btn" %>
       <%= react_component('MenuButton') %>
     </div>
     <div class = "header-main">
       <div class = "header-theme">
         <p class = "shall">Shall we use!!</p>
         <p class = "every">毎日をこれ１つで</p>
-        <%= link_to "はじめる","#",class: "btn start-btn" %>
+        <%= link_to "はじめる","/signup",class: "btn start-btn" %>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@
       <%= image_tag 'list.png' %>
       <p>さぁ！始めてみよう</p>
     </div>
-    <%= link_to "はじめる","#",class: "btn start-btn" %>
+    <%= link_to "はじめる","/signup",class: "btn start-btn" %>
   </div>
 </div>
 <div class="top-footer">

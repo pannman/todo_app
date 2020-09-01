@@ -18,13 +18,13 @@ function Sidebar(props){
     <div>
       <div id ="sidebar">
         <div className ="batu" onClick={() => props.onSetSidebarOpen(false)} >
-          <p>×</p>
+          <h1>×</h1>
         </div>
-        <div href = "#" className ="login-responsive-btn">
-          <a>ログイン</a>
+        <div className ="login-responsive-btn">
+          <a href = "#">ログイン</a>
         </div>
-        <div href ="#"className ="signup-responsive-btn">
-          <a>サインアップ</a>
+        <div className ="signup-responsive-btn">
+          <a href ="/signup">サインアップ</a>
         </div>
       </div>
       <div id = "alltouch" onClick={() => props.onSetSidebarOpen(false)}>
