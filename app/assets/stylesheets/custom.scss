@@ -89,7 +89,6 @@ p{
 }
 .start-btn:hover{
   opacity: 0.4;
-  border-color: red;
 }
 .main-feature{
   margin: auto;
@@ -205,10 +204,11 @@ p{
 .signup-form{
   display: flex;
   flex-flow: column;
-  width: 88%;
+  width: 100%;
 }
 .signup-form div{
   margin-left: 45px;
+  margin-right: 45px;
   display: flex;
   flex-flow: column;
   margin-top: 28px;
@@ -267,6 +267,24 @@ p{
   list-style: none;
   font-size: 10px;
   color: red;
+}
+
+//loginページ
+#login{
+  margin-top: 90px;
+}
+#login-form div{
+  margin-top: 30px;
+}
+#login-finish{
+  width: 140px;
+}
+.error_message-login{
+  list-style: none;
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: auto;
 }
 /* 959px以下に適用されるCSS（タブレット用） */
 @media screen and (max-width: 1050px) {
@@ -336,6 +354,18 @@ p{
   .error_message li{
     font-size: 16px;
 
+  }
+  //loginページ
+  #login-form div{
+    margin-top: 100px;
+  }
+  #login-finish{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .error_message-login{
+    font-size: 15px;
   }
 
 }
@@ -589,6 +619,14 @@ p{
   .error_message li{
     font-size: 13px;
 
+  }
+
+  //loginページ
+  #login-form div{
+    margin-top: 40px;
+  }
+  #login-finish{
+    width: 120px;
   }
 
 

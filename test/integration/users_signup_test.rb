@@ -30,6 +30,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     get signup_path
     assert_template 'users/new'
     assert_select "a[href=?]", "/"
-    assert_select "a[href=?]", "/#"
+    assert_select "a[href=?]", login_path
   end
 end

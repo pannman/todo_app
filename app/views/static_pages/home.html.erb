@@ -3,7 +3,7 @@
   <div class = "background-opacity">
     <div class ="header-top">
       <%= link_to image_tag("title.png"), "/",class: "title-image" %>
-      <%= link_to "ログイン","#",class: "btn login-btn" %>
+      <%= link_to "ログイン",login_path,method: :get,class: "btn login-btn" %>
       <%= link_to "サインアップ",signup_path,method: :get,class: "btn signup-btn" %>
       <%= react_component('MenuButton') %>
     </div>

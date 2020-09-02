@@ -1,0 +1,31 @@
+<% provide(:title, 'ログインページ') %>
+<%= link_to image_tag("title.png"), "/",class: "signup-image" %>
+<div class="signup" id="login">
+  <h1>ログイン</h1>
+  <div class="signup-form" id="login-form">
+    <ul class ="error_message-login">
+      <% flash.each do |message_type, message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <div class="mailadress">
+        <%= f.label :"メールアドレス"%>
+        <%= f.email_field :email, placeholder: "　メールアドレスを入力" %>
+      </div>
+
+      <div class="pass">
+        <%= f.label :"パスワード"%>
+        <%= f.password_field :password, placeholder: "　パスワードを入力"  %>
+      </div>
+  </div>
+    <div class="finish" id ="login-finish">
+      <%= f.submit "ログイン", class: "btn" %>
+    </div>
+    <% end %>
+  <div class ="line">
+  </div>
+  <div class="login-folow">
+    <%= link_to "サインアップはこちら",signup_path,method: :get %>
+  </div>
+</div>
