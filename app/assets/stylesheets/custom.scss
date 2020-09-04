@@ -290,6 +290,26 @@ p{
   font-size: 13px;
   vertical-align:0.5em;
 }
+.passforget{
+  font-size: 13px;
+}
+
+//passwordforget newページ
+.success-flash{
+  color: lightgreen;
+  font-size: 15px;
+  margin: auto;
+  list-style: none;
+}
+#reset-finish{
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#reset-finish input{
+  font-size: 18px;
+}
+
 /* 959px以下に適用されるCSS（タブレット用） */
 @media screen and (max-width: 1050px) {
 //Topページ
@@ -375,6 +395,22 @@ p{
   .remember-box span{
     font-size: 18px;
     vertical-align:0.7em;
+  }
+  .passforget{
+    font-size: 18px;
+  }
+
+  //passwordforget newページ
+  .success-flash{
+    color: lightgreen;
+    font-size: 20px;
+    margin: auto;
+    list-style: none;
+  }
+  #reset-finish{
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
 }
@@ -640,6 +676,26 @@ p{
   .remember-box span{
     font-size: 14px;
     vertical-align:0.4em;
+  }
+  .passforget{
+    font-size: 14px;
+
+  }
+
+  //passwordforget newページ
+  .success-flash{
+    color: lightgreen;
+    font-size: 13px;
+    margin: auto;
+    list-style: none;
+  }
+  #reset-finish{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #reset-finish input{
+    font-size: 18px;
   }
 
 

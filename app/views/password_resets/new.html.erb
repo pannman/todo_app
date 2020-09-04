@@ -1,0 +1,27 @@
+<% provide(:title, 'パスワードを忘れた方へ') %>
+<%= link_to image_tag("title.png"), "/",class: "signup-image" %>
+<div class="signup" id="login">
+  <h1>パスワードをお忘れですか？</h1>
+  <ul class ="success-flash">
+      <li><%= flash[:success] %></li>
+  </ul>
+  <div class="signup-form" id="login-form">
+    <ul class ="error_message-login">
+        <li><%= flash[:danger] %></li>
+    </ul>
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+      <div class="mailadress">
+        <%= f.label :"メールアドレス"%>
+        <%= f.email_field :email, placeholder: "　メールアドレスを入力" %>
+      </div>
+
+    <div class="finish" id ="reset-finish">
+      <%= f.submit "パスワードをリセット", class: "btn" %>
+    </div>
+    <% end %>
+  <div class ="line">
+  </div>
+  <div class="login-folow">
+    <%= link_to "ログインに移動する",login_path,method: :get %>
+  </div>
+</div>

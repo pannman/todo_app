@@ -1,0 +1,26 @@
+<% provide(:title, 'パスワード変更ページ') %>
+<%= link_to image_tag("title.png"), "/",class: "signup-image" %>
+<div class="signup">
+  <h1>パスワード変更</h1>
+  <div class="signup-form">
+    <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+
+      <%= hidden_field_tag :email, @user.email %>
+
+      <div class="pass">
+        <%= f.label :"パスワード"%>
+        <%= render 'shared/error_messages_password' %>
+        <%= f.password_field :password, placeholder: "　パスワードを入力"  %>
+      </div>
+
+      <div class="passcon">
+        <%= f.label :password_confirmation, "パスワード(確認用)"%>
+        <%= render 'shared/error_messages_password_confirmation' %>
+        <%= f.password_field :password_confirmation , placeholder: "　パスワード(確認用)を入力" %>
+      </div>
+  </div>
+    <div class="finish">
+      <%= f.submit "パスワードを変更", class: "btn" %>
+    </div>
+    <% end %>
+</div>
