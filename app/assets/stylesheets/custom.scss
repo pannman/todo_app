@@ -286,6 +286,10 @@ p{
   margin-top: 10px;
   margin-bottom: auto;
 }
+.remember-box span{
+  font-size: 13px;
+  vertical-align:0.5em;
+}
 /* 959px以下に適用されるCSS（タブレット用） */
 @media screen and (max-width: 1050px) {
 //Topページ
@@ -366,6 +370,11 @@ p{
   }
   .error_message-login{
     font-size: 15px;
+  }
+
+  .remember-box span{
+    font-size: 18px;
+    vertical-align:0.7em;
   }
 
 }
@@ -627,6 +636,10 @@ p{
   }
   #login-finish{
     width: 120px;
+  }
+  .remember-box span{
+    font-size: 14px;
+    vertical-align:0.4em;
   }
 
 

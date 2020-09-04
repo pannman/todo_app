@@ -18,6 +18,12 @@
         <%= f.label :"パスワード"%>
         <%= f.password_field :password, placeholder: "　パスワードを入力"  %>
       </div>
+      <div class ="remember-box">
+        <%= f.label :remember_me do %>
+          <%= f.check_box :remember_me %>
+          <span>ログイン状態を保持する</span>
+        <% end %>
+      </div>
   </div>
     <div class="finish" id ="login-finish">
       <%= f.submit "ログイン", class: "btn" %>
