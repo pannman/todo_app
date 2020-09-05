@@ -22,6 +22,11 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password:              "password",
                                          password_confirmation: "password" } }
     end
+    user = User.new(name:  "Example User",
+                     email: "user@example.com",
+                     password:              "password",
+                     password_confirmation: "password")
+    log_in_as(user)
     follow_redirect!
     assert_template 'users/show'
   end

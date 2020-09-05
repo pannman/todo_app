@@ -7,9 +7,7 @@
   </ul>
   <div class="signup-form" id="login-form">
     <ul class ="error_message-login">
-      <% flash.each do |message_type, message| %>
-        <li><%= message %></li>
-      <% end %>
+      <li><%= flash[:danger] %></li>
     </ul>
     <%= form_for(:session, url: login_path) do |f| %>
       <div class="mailadress">

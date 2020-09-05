@@ -21,7 +21,7 @@ function Sidebar(props){
           <h1>×</h1>
         </div>
         <div className ="login-responsive-btn">
-          <a href = "#">ログイン</a>
+          <a href = "/login">ログイン</a>
         </div>
         <div className ="signup-responsive-btn">
           <a href ="/signup">サインアップ</a>
