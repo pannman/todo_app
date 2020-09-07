@@ -1,0 +1,7 @@
+<% if @todo.errors.full_messages_for(:todo).any? %>
+  <ul class = "error_message">
+  <% @todo.errors.full_messages_for(:todo).each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>

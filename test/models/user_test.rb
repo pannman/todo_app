@@ -67,4 +67,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
 
+  test "associated todos should be destroyed" do
+    @user.save
+    @user.todos.create!(todo: "Todo")
+    assert_difference 'Todo.count', -1 do
+      @user.destroy
+    end
+  end
+
 end

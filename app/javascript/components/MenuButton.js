@@ -20,12 +20,12 @@ function Sidebar(props){
         <div className ="batu" onClick={() => props.onSetSidebarOpen(false)} >
           <h1>×</h1>
         </div>
-        <div className ="login-responsive-btn">
-          <a href = "/login">ログイン</a>
-        </div>
-        <div className ="signup-responsive-btn">
-          <a href ="/signup">サインアップ</a>
-        </div>
+        <form  action="/login" method="get">
+          <input type="submit" value="ログイン" className ="login-responsive-btn" />
+        </form>
+        <form  action="/signup" method="get">
+          <input type="submit" value="サインアップ" className ="signup-responsive-btn" />
+        </form>
       </div>
       <div id = "alltouch" onClick={() => props.onSetSidebarOpen(false)}>
       </div>

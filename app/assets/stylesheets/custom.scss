@@ -5,6 +5,14 @@ body{
 p{
   margin: auto;
 }
+// #alltouch{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 2000px;
+//
+// }
 
 //Topページ
 .top-header{
@@ -310,6 +318,231 @@ p{
   font-size: 18px;
 }
 
+//Todoページ
+.show-header{
+  height : 95px;
+  background-color: #8DF0F3;
+  width: 100%;
+}
+.show-header-top{
+  float: right;
+  margin: 5px;
+}
+
+.complete{
+  padding: 10px;
+  width: 100px;
+  margin-top: 23px;
+  margin-right: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  float: left;
+}
+.plus-image img{
+  width: 65px;
+  height: 65px;
+  margin:14px;
+}
+.plus-image:hover{
+  opacity: 0.7;
+}
+.config{
+  float: left;
+  display:flex;
+  flex-flow: column;
+
+}
+.config label{
+  width: 0%;
+}
+.configuration-image{
+  width: 100%;
+  width: 60px;
+  height: 60px;
+  margin-top:14px;
+  margin-left: 56px;
+  margin-right: 56px;
+  float: left;
+}
+.configuration-image:hover{
+  opacity: 0.7;
+}
+
+.config input[type="checkbox"]{
+  display:none;
+}
+
+#menu:checked + .balloon{
+  display:block;
+}
+
+
+.balloon{
+  // z-index: 500;
+  display:none;
+  position: relative;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  font-size: 16px;
+  background: white;
+  border-radius: 10px;
+  border: solid 1px #68ECF2;
+}
+.balloon:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #68ECF2;
+}
+
+// #alltouch{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 2000px;
+//
+// }
+
+
+.config-btn{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 60%;
+  display: block;
+  border-radius: 50px;
+  background-color: #68ECF2;
+  opacity: 0.6;
+  padding:30px;
+  border: solid 1px #68ECF2;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight:bolder;
+}
+.config-btn:hover{
+  opacity: 0.4;
+}
+
+.logout-btn{
+  margin-bottom: 10px;
+  text-align: center;
+  width: 60%;
+  display: block;
+  border-radius: 50px;
+  background-color: #68ECF2;
+  opacity: 0.6;
+  padding:30px;
+  border: solid 1px #68ECF2;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight:bolder;
+}
+.logout-btn:hover{
+  opacity: 0.4;
+}
+
+
+
+.show-main{
+  margin-top: 130px;
+  width: 54%;
+  margin-right: 23%;
+  margin-left: 23%;
+}
+.todos{
+  font-size: 22px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 50px;
+  margin-top: 8px;
+}
+.todo-checkbox{
+  padding-top: 13px;
+  float: left;
+}
+.todo{
+  padding-top: 13px;
+  margin-left: 5px;
+  width: 80%;
+  float: left;
+}
+.image-btn{
+  float: right;
+}
+.edit-image img{
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+.edit-image:hover{
+  opacity: 0.7;
+}
+.delete-image img{
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+.delete-image:hover{
+  opacity: 0.7;
+}
+
+//ユーザー設定ページ
+.edit-btn{
+  width: 180px;
+}
+
+//Todo登録ページ
+.todo-new-header{
+  height : 95px;
+  background-color: #8DF0F3;
+  width: 100%;
+}
+.arrow-image >img{
+  width: 65px;
+  height: 65px;
+  margin:13px;
+  float: left;
+}
+.arrow-image >img:hover{
+  opacity: 0.7;
+}
+
+.create-todo{
+  float: right;
+  width: 36%;
+  background-color: #F5F5F5;
+  margin: 60px;
+  margin-right: 30%;
+  border-radius: 50px;
+  border: solid 1px #9C9C9C;
+  padding: 50px;
+}
+.create-todo .todo-input{
+  border-radius: 5px;
+  border: solid 1px #9C9C9C;
+  height: 2.5em;
+  font-size: 15px;
+}
+.todo-btn{
+  width: 180px;
+  border-radius: 50px;
+  margin: auto;
+  padding:10px;
+  border: solid 1px #68ECF2;
+  color: white;
+  text-decoration: none;
+}
+
 /* 959px以下に適用されるCSS（タブレット用） */
 @media screen and (max-width: 1050px) {
 //Topページ
@@ -413,6 +646,11 @@ p{
     margin-bottom: 40px;
   }
 
+  //ユーザー設定ページ
+  .edit-btn{
+    width: 260px;
+  }
+
 }
 
 /* 480px以下に適用されるCSS（スマホ用） */
@@ -434,6 +672,7 @@ p{
     margin:13px;
   }
   #alltouch{
+    position: relative;
     width: 100%;
     height: 2000px;
     background-color: rgba( black, 0.15 );
@@ -449,13 +688,14 @@ p{
 
   .login-responsive-btn{
     margin-top: 25%;
-    margin-left: 30%;
+    margin-left: 10%;
     text-align: center;
     width: 40%;
     border-radius: 50px;
     padding:10px;
     border: solid 1px #68ECF2;
     background-color: white;
+    color: #68ECF2;
   }
 
   .login-responsive-btn a{
@@ -701,5 +941,8 @@ p{
     font-size: 18px;
   }
 
-
+  //ユーザー設定ページ
+  .edit-btn{
+    width: 160px;
+  }
 }

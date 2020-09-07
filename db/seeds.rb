@@ -10,3 +10,9 @@ User.create!(name:  "大宅 康喜",
              password:              "kK18732010",
              password_confirmation: "kK18732010",
              admin: true)
+
+ users = User.order(:created_at).take(6)
+ 1.times do
+   todo = Faker::Lorem.sentence(5)
+   users.each { |user| user.todos.create!(todo: todo) }
+ end

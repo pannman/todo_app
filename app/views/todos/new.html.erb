@@ -1,0 +1,20 @@
+<% provide(:title, 'Todo追加ページ') %>
+<div class ="todo-new-header">
+  <%= link_to image_tag("leftarrow.png"), @user ,method: :get,class: "arrow-image" %>
+</div>
+
+<div class="create-todo">
+  <h1>新しいTodo</h1>
+  <div class="signup-form">
+    <%= form_for(@todo, url: addtodo_path) do |f| %>
+    <%= render 'shared/error_messages_todo' %>
+      <div class="username">
+        <%= f.text_field :todo, placeholder: "例：ご飯を作る　今日　午後６時"%>
+      </div>
+
+  </div>
+    <div class="finish">
+      <%= f.submit "Todoを登録", class: "btn todo-btn" %>
+    </div>
+    <% end %>
+</div>

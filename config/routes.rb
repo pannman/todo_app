@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get '/addtodo', to: 'todos#new'
+  post '/addtodo', to: 'todos#create'
   resources :users
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :todos,          only: [:new,:create,:edit, :update,:destroy]
 end

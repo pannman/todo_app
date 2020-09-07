@@ -1,2 +1,41 @@
-<%= @user.name %>, <%= @user.email %>
-<%= link_to "Log out", logout_path, method: :delete %>
+<% provide(:title, "Todoページ") %>
+<div class="show-header">
+  <%= link_to image_tag("title.png"), "/",class: "title-image" %>
+  <div class="show-header-top">
+    <div class="complete">
+      <p>完了2件</p>
+    </div>
+    <%= link_to image_tag("plus.png"), addtodo_path, method: :get,class: "plus-image" %>
+    <div class="config">
+      <label for="menu"> <%= image_tag 'configuration.png',class: "configuration-image", for:"menu"%></label>
+      <input type="checkbox" id="menu">
+      <div class="balloon">
+        <%= link_to "ユーザー設定", edit_user_path, method: :get,class: "btn config-btn" %>
+        <%= link_to "ログアウト", logout_path, method: :delete,class: "btn logout-btn" %>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<div class="show-main">
+  <h1><%= @user.name %>さんのTodo一覧</h1>
+  <div class="index-todos">
+    <% @todos.each do |todo| %>
+    <div class="todos">
+      <div class="todo-checkbox">
+        <input type="checkbox">
+      </div>
+      <div class="todo">
+        <p><%= todo.todo %></p>
+      </div>
+      <div class ="image-btn">
+        <%= link_to image_tag("edit.png"), edit_todo_path(todo),method: :get,class: "edit-image" %>
+        <%= link_to image_tag("delete.png"),todo, method: :delete,
+        class: "delete-image",data: { confirm: "本当によろしいですか?" } %>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
