@@ -10,16 +10,3 @@ User.create!(name:  "大宅 康喜",
              password:              "kK18732010",
              password_confirmation: "kK18732010",
              admin: true)
-
- users = User.order(:created_at).take(6)
- 3.times do
-   todo = Faker::Lorem.sentence(5)
-   done =true
-   users.each { |user| user.todos.create!(todo: todo,done: done) }
- end
- users = User.order(:created_at).take(6)
- 3.times do
-   todo = Faker::Lorem.sentence(5)
-   done =false
-   users.each { |user| user.todos.create!(todo: todo,done: done) }
- end
