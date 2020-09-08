@@ -1,0 +1,26 @@
+<% provide(:title, 'Todo完了一覧ページ') %>
+<div class ="todo-new-header">
+  <%= link_to image_tag("leftarrow.png"), @user ,method: :get,class: "arrow-image" %>
+</div>
+<div class="show-main">
+  <h1>完了済み一覧</h1>
+  <div class="index-todos">
+    <% @todos.each do |todo| %>
+    <div class="todos">
+      <div class="todo-done-checkbox">
+        <%= form_for(:todos, url: "/complete/#{todo.id}", method: :patch) do |f| %>
+          <%= f.submit :done %>
+        <% end %>
+      </div>
+      <div class="todo">
+        <p><%= todo.todo %></p>
+      </div>
+      <div class ="image-btn">
+        <%= link_to image_tag("delete.png"),todo, method: :delete,
+        class: "delete-image",data: { confirm: "本当によろしいですか?" } %>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

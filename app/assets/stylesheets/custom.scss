@@ -5,14 +5,6 @@ body{
 p{
   margin: auto;
 }
-// #alltouch{
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 2000px;
-//
-// }
 
 //Topページ
 .top-header{
@@ -339,6 +331,10 @@ p{
   border-radius: 10px;
   float: left;
 }
+.comp-btn{
+  text-decoration: none;
+  color: black;
+}
 .plus-image img{
   width: 65px;
   height: 65px;
@@ -379,7 +375,6 @@ p{
 
 
 .balloon{
-  // z-index: 500;
   display:none;
   position: relative;
   margin: 1.5em 0;
@@ -401,14 +396,7 @@ p{
   border-bottom: 15px solid #68ECF2;
 }
 
-// #alltouch{
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 2000px;
-//
-// }
+
 
 
 .config-btn{
@@ -467,8 +455,38 @@ p{
   margin-top: 8px;
 }
 .todo-checkbox{
-  padding-top: 13px;
+  padding-top: 8px;
   float: left;
+}
+.todo-checkbox input{
+  background-color: white;
+  color: white;
+  font-size: 5px;
+  text-align: center;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  border: solid 1px gray;
+}
+.todo-checkbox input:hover{
+  background-color: gray;
+}
+.todo-done-checkbox{
+  padding-top: 8px;
+  float: left;
+}
+.todo-done-checkbox input{
+  background-color: gray;
+  color: white;
+  font-size: 5px;
+  text-align: center;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  border: solid 1px gray;
+}
+.todo-done-checkbox input:hover{
+  background-color: white;
 }
 .todo{
   padding-top: 13px;
@@ -495,6 +513,9 @@ p{
 .delete-image:hover{
   opacity: 0.7;
 }
+.complete-resposnsive{
+  display: none;
+}
 
 //ユーザー設定ページ
 .edit-btn{
@@ -516,7 +537,9 @@ p{
 .arrow-image >img:hover{
   opacity: 0.7;
 }
-
+.complete{
+  display: none;
+}
 .create-todo{
   float: right;
   width: 36%;
@@ -650,6 +673,55 @@ p{
   .edit-btn{
     width: 260px;
   }
+  //TODOページ
+  .balloon{
+    margin: 1.0em 0;
+    font-size: 13px;
+  }
+  .show-main{
+    margin-top: 160px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .todo{
+    width: 75%;
+  }
+  .complete-resposnsive{
+    width: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+    padding:10px;
+    margin-top: 30px;
+    background-color: #68ECF2;
+    text-decoration: none;
+    font-size: 20px;
+    text-align:center;
+  }
+  .complete-resposnsive a{
+    color: white;
+  }
+
+  //ToDo登録ページ
+
+  .create-todo{
+    width: 65%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .create-todo .todo-input{
+    border-radius: 5px;
+    border: solid 1px #9C9C9C;
+    height: 2.5em;
+    font-size: 15px;
+  }
+  .todo-btn{
+    width: 240px;
+
+  }
+
+
 
 }
 
@@ -945,4 +1017,99 @@ p{
   .edit-btn{
     width: 160px;
   }
+
+  //ToDoページ
+  .show-header{
+    height: 75px;
+  }
+  .plus-image img{
+    width: 55px;
+    height: 55px;
+    margin:10px;
+  }
+
+  .configuration-image{
+    position: absolute;
+    top: 5px;
+    right: 10%;;
+    width: 50px;
+    height: 50px;
+  }
+  .balloon{
+    display:none;
+    position: absolute;
+    top: 80px;
+    right: 8%;;
+  }
+  .show-main{
+    margin-top: 40px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .show-main h1{
+    font-size: 20px;
+  }
+  .todos{
+    font-size: 15px;
+    padding-bottom: 10px;
+    padding-top: 33px;
+  }
+  .todo-checkbox input{
+    font-size: 1px;
+    width: 30px;
+    height: 30px;
+  }
+  .todo{
+    padding-top: 13px;
+    margin-left: 5px;
+    width: 60%;
+    float: left;
+  }
+
+  .complete-resposnsive{
+    width: 200px;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+    padding:10px;
+    margin-top: 30px;
+    background-color: #68ECF2;
+    text-decoration: none;
+    font-size: 20px;
+    text-align:center;
+  }
+  .complete-resposnsive a{
+    color: white;
+  }
+
+  //ToDo登録ページ
+
+  .create-todo{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: inherit;
+    background-color: #FEFEFE;
+    border: none;
+  }
+  .create-todo .todo-input{
+    border-radius: 5px;
+    border: solid 1px #9C9C9C;
+    height: 2.5em;
+    font-size: 15px;
+  }
+  
+  .todo-btn{
+    width: 160px;
+
+
+  }
+
+
+
+
+
 }

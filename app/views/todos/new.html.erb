@@ -9,7 +9,7 @@
     <%= form_for(@todo, url: addtodo_path) do |f| %>
     <%= render 'shared/error_messages_todo' %>
       <div class="username">
-        <%= f.text_field :todo, placeholder: "例：ご飯を作る　今日　午後６時"%>
+        <%= f.text_field :todo, placeholder: "例：ご飯を作る　今日　午後６時", class: "todo-input"%>
       </div>
 
   </div>

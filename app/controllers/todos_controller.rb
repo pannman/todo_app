@@ -2,6 +2,15 @@ class TodosController < ApplicationController
   before_action :logged_in_user, only: [:create,:edit,:update, :destroy]
   before_action :correct_user,   only: [:edit,:update,:destroy]
 
+  def index
+    if(user_id = session[:user_id])
+      @user = User.find_by(id: user_id)
+    else
+      redirect_to root_url
+    end
+    @todos = @user.todos.where(done: true)
+  end
+
   def new
     @todo = Todo.new
     if(user_id = session[:user_id])
@@ -24,6 +33,11 @@ class TodosController < ApplicationController
   end
 
   def edit
+    if(user_id = session[:user_id])
+      @user = User.find_by(id: user_id)
+    else
+      redirect_to root_url
+    end
     @todo = Todo.find(params[:id])
   end
 
@@ -46,10 +60,27 @@ class TodosController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+
+
+  def complete
+    if(user_id = session[:user_id])
+      @user = User.find_by(id: user_id)
+    else
+      redirect_to root_url
+    end
+    @todo = Todo.find(params[:id])
+    @todo.done = !@todo.done
+    if @todo.save
+      redirect_to @user
+    else
+      redirect_to @user
+    end
+  end
+
   private
 
     def todo_params
-      params.require(:todo).permit(:todo)
+      params.require(:todo).permit(:todo,:done)
     end
 
     def correct_user

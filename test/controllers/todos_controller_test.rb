@@ -13,6 +13,12 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get index" do
+    log_in_as(@user)
+    get completes_path
+    assert_response :success
+  end
+
 
   test "should redirect create when not logged in" do
     assert_no_difference 'Todo.count' do

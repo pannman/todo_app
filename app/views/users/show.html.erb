@@ -3,7 +3,7 @@
   <%= link_to image_tag("title.png"), "/",class: "title-image" %>
   <div class="show-header-top">
     <div class="complete">
-      <p>完了2件</p>
+      <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
     </div>
     <%= link_to image_tag("plus.png"), addtodo_path, method: :get,class: "plus-image" %>
     <div class="config">
@@ -21,10 +21,12 @@
 <div class="show-main">
   <h1><%= @user.name %>さんのTodo一覧</h1>
   <div class="index-todos">
-    <% @todos.each do |todo| %>
+    <% @ttodos.each do |todo| %>
     <div class="todos">
       <div class="todo-checkbox">
-        <input type="checkbox">
+        <%= form_for(:todos, url: "/complete/#{todo.id}", method: :patch) do |f| %>
+          <%= f.submit :done %>
+        <% end %>
       </div>
       <div class="todo">
         <p><%= todo.todo %></p>
@@ -37,5 +39,8 @@
       </div>
     </div>
     <% end %>
+  </div>
+  <div class="complete-resposnsive">
+    <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
   </div>
 </div>

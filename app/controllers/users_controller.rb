@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @todos = @user.todos.all
+    @ttodos = @todos.where(done: false)
+    @ftodos = @todos.where(done: true)
   end
 
   def new
