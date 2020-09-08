@@ -2,9 +2,11 @@
 <div class="show-header">
   <%= link_to image_tag("title.png"), "/",class: "title-image" %>
   <div class="show-header-top">
-    <div class="complete">
-      <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
-    </div>
+    <% if @ftodos.count > 0 %>
+      <div class="complete">
+        <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
+      </div>
+    <% end %>
     <%= link_to image_tag("plus.png"), addtodo_path, method: :get,class: "plus-image" %>
     <div class="config">
       <label for="menu"> <%= image_tag 'configuration.png',class: "configuration-image", for:"menu"%></label>
@@ -40,7 +42,9 @@
     </div>
     <% end %>
   </div>
-  <div class="complete-resposnsive">
-    <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
-  </div>
+    <% if @ftodos.count > 0 %>
+      <div class="complete-resposnsive">
+        <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
+      </div>
+    <% end %>
 </div>
