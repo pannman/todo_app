@@ -2,20 +2,24 @@
 
 one:
   todo: "<%= Faker::Lorem.sentence(word_count: 5) %>"
+  done: false
   created_at: <%= 10.minutes.ago %>
   user: michael
 
 two:
   todo: "<%= Faker::Lorem.sentence(word_count: 5) %>"
+  done: true
   created_at: <%= 3.years.ago %>
   user: michael
 
 three:
   todo: "<%= Faker::Lorem.sentence(word_count: 5) %>"
+  done: false
   created_at: <%= 2.hours.ago %>
   user: archer
 
 most_recent:
   todo: "<%= Faker::Lorem.sentence(word_count: 5) %>"
+  done: false
   created_at: <%= Time.zone.now %>
   user: michael

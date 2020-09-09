@@ -57,4 +57,19 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to root_url
   end
+
+  test "should redirect complete when not logged in" do
+    patch todo_path(@todo), params: { todo: { done: true }}
+    assert_not flash.empty?
+    assert_redirected_to login_url
+  end
+
+  test "should redirect complete for wrong todo" do
+    log_in_as(@user)
+    todo = todos(:three)
+    patch todo_path(todo), params: {todo: { todo: true}}
+
+    assert_redirected_to root_url
+  end
+
 end

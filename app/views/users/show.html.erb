@@ -4,7 +4,7 @@
   <div class="show-header-top">
     <% if @ftodos.count > 0 %>
       <div class="complete">
-        <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
+        <%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %>
       </div>
     <% end %>
     <%= link_to image_tag("plus.png"), addtodo_path, method: :get,class: "plus-image" %>
@@ -44,7 +44,7 @@
   </div>
     <% if @ftodos.count > 0 %>
       <div class="complete-resposnsive">
-        <p><%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %><p>
+        <%= link_to "完了#{@ftodos.count}件", completes_path, method: :get,class: "btn comp-btn" %>
       </div>
     <% end %>
 </div>

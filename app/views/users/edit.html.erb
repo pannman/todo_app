@@ -1,35 +1,9 @@
 <% provide(:title, 'ユーザー設定ページ') %>
+<% provide(:action, "編集する") %>
+<% provide(:url, user_path) %>
+<% provide(:btncss, "edit-btn") %>
 <%= link_to image_tag("title.png"), "/",class: "signup-image" %>
 <div class="signup">
   <h1>ユーザー設定</h1>
-  <div class="signup-form">
-    <%= form_for(@user) do |f| %>
-      <div class="username">
-        <%= f.label :"ユーザー名" %>
-        <%= render 'shared/error_messages_name'%>
-        <%= f.text_field :name, placeholder: "　ユーザー名を入力"%>
-      </div>
-
-      <div class="mailadress">
-        <%= f.label :"メールアドレス"%>
-        <%= render 'shared/error_messages_email' %>
-        <%= f.email_field :email, placeholder: "　メールアドレスを入力" %>
-      </div>
-
-      <div class="pass">
-        <%= f.label :"パスワード"%>
-        <%= render 'shared/error_messages_password' %>
-        <%= f.password_field :password, placeholder: "　パスワードを入力"  %>
-      </div>
-
-      <div class="passcon">
-        <%= f.label :password_confirmation, "パスワード(確認用)"%>
-        <%= render 'shared/error_messages_password_confirmation' %>
-        <%= f.password_field :password_confirmation , placeholder: "　パスワード(確認用)を入力" %>
-      </div>
-  </div>
-    <div class="finish">
-      <%= f.submit "編集する", class: "btn edit-btn" %>
-    </div>
-    <% end %>
+  <%= render partial: 'user' %>
 </div>

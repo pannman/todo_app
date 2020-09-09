@@ -1,23 +1,15 @@
 class TodosController < ApplicationController
   before_action :logged_in_user, only: [:create,:edit,:update, :destroy]
   before_action :correct_user,   only: [:edit,:update,:destroy]
+  before_action :user_add,       only: [:index,:edit,:update,:complete]
 
   def index
-    if(user_id = session[:user_id])
-      @user = User.find_by(id: user_id)
-    else
-      redirect_to root_url
-    end
     @todos = @user.todos.where(done: true)
   end
 
   def new
     @todo = Todo.new
-    if(user_id = session[:user_id])
-      @user = User.find_by(id: user_id)
-    else
-      redirect_to root_url
-    end
+    user_add
   end
 
   def create
@@ -33,20 +25,10 @@ class TodosController < ApplicationController
   end
 
   def edit
-    if(user_id = session[:user_id])
-      @user = User.find_by(id: user_id)
-    else
-      redirect_to root_url
-    end
     @todo = Todo.find(params[:id])
   end
 
   def update
-    if(user_id = session[:user_id])
-      @user = User.find_by(id: user_id)
-    else
-      redirect_to root_url
-    end
     @todo = Todo.find(params[:id])
     if @todo.update_attributes(todo_params)
       redirect_to @user
@@ -63,11 +45,6 @@ class TodosController < ApplicationController
 
 
   def complete
-    if(user_id = session[:user_id])
-      @user = User.find_by(id: user_id)
-    else
-      redirect_to root_url
-    end
     @todo = Todo.find(params[:id])
     @todo.done = !@todo.done
     if @todo.save
@@ -86,5 +63,14 @@ class TodosController < ApplicationController
     def correct_user
       @todo = current_user.todos.find_by(id: params[:id])
       redirect_to root_url if @todo.nil?
+    end
+
+    def user_add
+      if(user_id = session[:user_id])
+        @user = User.find_by(id: user_id)
+      else
+        lash[:danger] = "ログインしてください"
+        redirect_to login_url
+      end
     end
 end
